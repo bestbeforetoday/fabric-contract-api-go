@@ -23,6 +23,11 @@ import (
 	"github.com/hyperledger/fabric-protos-go-apiv2/peer"
 )
 
+//lint:ignore U1000 used for testing
+type chaincodeStubInterface interface {
+	shim.ChaincodeStubInterface
+}
+
 type contractChaincodeContract struct {
 	info                      metadata.InfoMetadata
 	functions                 map[string]*internal.ContractFunction

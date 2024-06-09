@@ -5,6 +5,10 @@ base_dir := $(patsubst %/,%,$(dir $(realpath $(lastword $(MAKEFILE_LIST)))))
 functional_dir := $(base_dir)/internal/functionaltests
 go_bin_dir := $(shell go env GOPATH)/bin
 
+mockery_version := 2.43.2
+kernel_name := $(shell uname -s)
+machine_hardware := $(shell uname -m)
+
 .PHONY: lint
 lint: staticcheck golangci-lint
 
@@ -23,6 +27,19 @@ $(go_bin_dir)/golangci-lint:
 .PHONY: golangci-lint
 golangci-lint: $(go_bin_dir)/golangci-lint
 	golangci-lint run
+
+.PHONY: install-mockery
+install-mockery:
+	curl --fail --location \
+		'https://github.com/vektra/mockery/releases/download/v$(mockery_version)/mockery_$(mockery_version)_$(kernel_name)_$(machine_hardware).tar.gz' \
+		| tar -C '$(go_bin_dir)' -xzf - mockery
+
+$(go_bin_dir)/mockery:
+	$(MAKE) install-mockery
+
+.PHONY: generate
+generate: $(go_bin_dir)/mockery
+	mockery
 
 .PHONY: unit-test
 unit-test:

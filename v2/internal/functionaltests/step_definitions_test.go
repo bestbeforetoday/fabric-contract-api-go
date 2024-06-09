@@ -15,8 +15,6 @@ import (
 	"testing"
 
 	"github.com/cucumber/godog"
-	//lint:ignore SA1019 TODO: needs to be removed
-	"github.com/hyperledger/fabric-chaincode-go/v2/shimtest"
 	"github.com/hyperledger/fabric-contract-api-go/v2/contractapi"
 	"github.com/hyperledger/fabric-contract-api-go/v2/internal/functionaltests/contracts/complexcontract"
 	"github.com/hyperledger/fabric-contract-api-go/v2/internal/functionaltests/contracts/extendedsimplecontract"
@@ -54,7 +52,7 @@ func NewComplexContract() *complexcontract.ComplexContract {
 
 type suiteContext struct {
 	lastResponse   *peer.Response
-	stub           *shimtest.MockStub
+	stub           *MockStub
 	chaincode      *contractapi.ContractChaincode
 	metadataFolder string
 }
@@ -81,7 +79,7 @@ func iHaveCreatedChaincodeFrom(ctx context.Context, name string) (context.Contex
 
 	sc := suiteContext{}
 	sc.chaincode = chaincode
-	sc.stub = shimtest.NewMockStub(name, sc.chaincode)
+	sc.stub = NewMockStub(name, sc.chaincode)
 
 	return context.WithValue(ctx, suiteContextKey{}, sc), nil
 }
@@ -113,7 +111,7 @@ func iHaveCreatedChaincodeFromMultipleContracts(ctx context.Context, contractsTb
 	}
 	sc := suiteContext{}
 	sc.chaincode = chaincode
-	sc.stub = shimtest.NewMockStub("MultiContract", sc.chaincode)
+	sc.stub = NewMockStub("MultiContract", sc.chaincode)
 	return context.WithValue(ctx, suiteContextKey{}, sc), nil
 }
 
