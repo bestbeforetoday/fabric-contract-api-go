@@ -11,9 +11,9 @@ import (
 	"path/filepath"
 	"reflect"
 
+	"github.com/bestbeforetoday/fabric-contract-api-go/v2/internal/utils"
 	"github.com/go-openapi/spec"
 	"github.com/gobuffalo/packr"
-	"github.com/hyperledger/fabric-contract-api-go/v2/internal/utils"
 	"github.com/xeipuuv/gojsonschema"
 )
 

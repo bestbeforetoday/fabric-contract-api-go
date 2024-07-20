@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/bestbeforetoday/fabric-contract-api-go/v2/internal/types"
+	"github.com/bestbeforetoday/fabric-contract-api-go/v2/metadata"
 	"github.com/go-openapi/spec"
-	"github.com/hyperledger/fabric-contract-api-go/v2/internal/types"
-	"github.com/hyperledger/fabric-contract-api-go/v2/metadata"
 	"github.com/stretchr/testify/assert"
 	"github.com/xeipuuv/gojsonschema"
 )

@@ -14,13 +14,13 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/bestbeforetoday/fabric-contract-api-go/v2/contractapi"
+	"github.com/bestbeforetoday/fabric-contract-api-go/v2/internal/functionaltests/contracts/complexcontract"
+	"github.com/bestbeforetoday/fabric-contract-api-go/v2/internal/functionaltests/contracts/extendedsimplecontract"
+	"github.com/bestbeforetoday/fabric-contract-api-go/v2/internal/functionaltests/contracts/simplecontract"
+	"github.com/bestbeforetoday/fabric-contract-api-go/v2/internal/functionaltests/contracts/utils"
+	"github.com/bestbeforetoday/fabric-contract-api-go/v2/metadata"
 	"github.com/cucumber/godog"
-	"github.com/hyperledger/fabric-contract-api-go/v2/contractapi"
-	"github.com/hyperledger/fabric-contract-api-go/v2/internal/functionaltests/contracts/complexcontract"
-	"github.com/hyperledger/fabric-contract-api-go/v2/internal/functionaltests/contracts/extendedsimplecontract"
-	"github.com/hyperledger/fabric-contract-api-go/v2/internal/functionaltests/contracts/simplecontract"
-	"github.com/hyperledger/fabric-contract-api-go/v2/internal/functionaltests/contracts/utils"
-	"github.com/hyperledger/fabric-contract-api-go/v2/metadata"
 	"github.com/hyperledger/fabric-protos-go-apiv2/peer"
 )
 

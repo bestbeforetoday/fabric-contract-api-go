@@ -2,7 +2,7 @@ module github.com/hyperledger/fabric-chaincode-integration/chaincodeprivate
 
 go 1.21.0
 
-require github.com/hyperledger/fabric-contract-api-go/v2 v2.0.0
+require github.com/bestbeforetoday/fabric-contract-api-go/v2 v2.0.0
 
 require (
 	github.com/go-openapi/jsonpointer v0.21.0 // indirect
@@ -31,4 +31,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/hyperledger/fabric-contract-api-go/v2 => ../../..
+replace github.com/bestbeforetoday/fabric-contract-api-go/v2 => ../../..

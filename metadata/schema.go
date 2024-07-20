@@ -9,8 +9,8 @@ import (
 	"strings"
 	"unicode"
 
+	"github.com/bestbeforetoday/fabric-contract-api-go/v2/internal/types"
 	"github.com/go-openapi/spec"
-	"github.com/hyperledger/fabric-contract-api-go/v2/internal/types"
 )
 
 // GetSchema returns the open api spec schema for a given type. For struct types the property

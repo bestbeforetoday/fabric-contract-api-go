@@ -9,9 +9,9 @@ import (
 	"reflect"
 	"testing"
 
+	metadata "github.com/bestbeforetoday/fabric-contract-api-go/v2/metadata"
+	"github.com/bestbeforetoday/fabric-contract-api-go/v2/serializer"
 	"github.com/go-openapi/spec"
-	metadata "github.com/hyperledger/fabric-contract-api-go/v2/metadata"
-	"github.com/hyperledger/fabric-contract-api-go/v2/serializer"
 	"github.com/stretchr/testify/assert"
 	"github.com/xeipuuv/gojsonschema"
 )

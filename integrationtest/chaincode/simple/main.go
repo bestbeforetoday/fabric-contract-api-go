@@ -6,7 +6,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/hyperledger/fabric-contract-api-go/v2/contractapi"
+	"github.com/bestbeforetoday/fabric-contract-api-go/v2/contractapi"
 )
 
 // SimpleContract with biz logic
